@@ -128,7 +128,7 @@ function createPDFs() {
             { word: 'Stormy', sentence: 'The night is stormy.', translation: 'Gece fırtınalı.', color: 'lavender' },
             { word: 'Icy', sentence: 'The road is icy.', translation: 'Yol buzlu.', color: 'azure' }
         ],
-        'Sınıf Eşyaları 1 (Classroom Objects)': [
+        'Sınıf Eşyaları (Classroom Objects)': [
             { word: 'Crayon', sentence: "What's this? This is a crayon.", translation: 'Bu ne? Bu bir pastel boya.', color: 'lightblue' },
             { word: 'Glue', sentence: "I want the glue, please!", translation: 'Yapıştırıcıyı istiyorum, lütfen!', color: 'lightpink' },
             { word: 'Schoolbag', sentence: "This is my schoolbag.", translation: 'Bu benim okul çantam.', color: 'lightyellow' },
@@ -138,13 +138,9 @@ function createPDFs() {
             { word: 'Sharpener', sentence: "What's this? It's a sharpener.", translation: 'Bu ne? Bu bir kalemtraş.', color: 'tan' },
             { word: 'Eraser', sentence: "I want the eraser, please!", translation: 'Silgiyi istiyorum, lütfen!', color: 'lightcoral' },
             { word: 'Chair', sentence: "It's a chair.", translation: 'Bu bir sandalye.', color: 'plum' },
-            { word: 'Table', sentence: "This is a table.", translation: 'Bu bir masa.', color: 'lightsalmon' }
-        ],
-        'Sınıf Eşyaları 2 (Classroom Objects)': [
+            { word: 'Table', sentence: "This is a table.", translation: 'Bu bir masa.', color: 'lightsalmon' },
             { word: 'Window', sentence: "It's a window.", translation: 'Bu bir pencere.', color: 'lightsteelblue' },
-            { word: 'Door', sentence: "It's a door.", translation: 'Bu bir kapı.', color: 'peachpuff' },
-            { word: 'Locker', sentence: "This is my locker.", translation: 'Bu benim dolabım.', color: 'lavender' },
-            { word: 'Smartboard', sentence: "Look at the smartboard.", translation: 'Akıllı tahtaya bak.', color: 'azure' }
+            { word: 'Door', sentence: "It's a door.", translation: 'Bu bir kapı.', color: 'peachpuff' }
         ],
         'Duygular (Feelings and Emotions)': [
             { word: 'Happy', sentence: "I am happy.", translation: 'Ben mutluyum.', color: 'lightyellow' },
@@ -207,20 +203,20 @@ function createPDFs() {
     const pageWidth = 595;
     const pageHeight = 842;
 
-    // A4 sayfasına yatay olarak 3 kart sığdır (kullanıcı isteği)
+    // A4 sayfasına yatay olarak 4 kart sığdır (kullanıcı isteği)
     // Kartlar arasında ve kenar boşlukları için alan bırak
     const margin = 15; // Kenar boşluğu
     const spaceBetween = 10; // Kartlar arası boşluk
 
-    // 3 kart için genişlik hesapla
-    const cardWidth = (pageWidth - (2 * margin) - (2 * spaceBetween)) / 3;
+    // 4 kart için genişlik hesapla
+    const cardWidth = (pageWidth - (2 * margin) - (3 * spaceBetween)) / 4;
 
-    // 3x4 = 12 kart olarak düzenle (4 sıra)
-    // 4 sıra için yükseklik hesapla
-    let cardHeight = (pageHeight - (2 * margin) - (3 * spaceBetween)) / 4;
+    // 4x3 = 12 kart olarak düzenle (3 sıra)
+    // 3 sıra için yükseklik hesapla
+    let cardHeight = (pageHeight - (2 * margin) - (2 * spaceBetween)) / 3;
     cardHeight = cardHeight - 10; // Kullanıcı isteği üzerine 10px azalt
 
-    // Sayfa başına 12 kart (3x4) sığdır - kullanıcı isteğiyle uyumlu olması için
+    // Sayfa başına 12 kart (4x3) sığdır - kullanıcı isteğiyle uyumlu olması için
     const maxCardsPerPage = 12;
 
     // Her tema için ayrı PDF dosyası oluştur
@@ -283,11 +279,11 @@ function createPDFs() {
             // Alt kısımda örnek cümle ve çevirisi
             doc.font('/System/Library/Fonts/Supplemental/Arial.ttf').fillColor('black')
                 .fontSize(12).text(card.sentence, xPos + 10, yPos + 150, { width: cardWidth - 20 });
-            doc.fontSize(11).text(card.translation, xPos + 10, yPos + 170, { width: cardWidth - 20 });
+            doc.fontSize(11).text(card.translation, xPos + 10, yPos + 185, { width: cardWidth - 20 });
 
             // Sonraki kartın konumu için indeksleri güncelle
             xOffset++;
-            if (xOffset >= 3) { // Bir satırda 3 kart
+            if (xOffset >= 4) { // Bir satırda 4 kart (güncellendi)
                 xOffset = 0;
                 yOffset++;
             }
