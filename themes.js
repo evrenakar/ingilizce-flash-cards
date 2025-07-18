@@ -238,6 +238,20 @@ const themes = {
         { word: 'Rainbow', sentence: 'Let\'s create a rainbow!', pronunciation: 'Lets kriyet e reynbov!', translation: 'Hadi gökkuşağı yapalım!', color: 'violet' },
         { word: 'Seed', sentence: 'Plant the seed.', pronunciation: 'Plent dı siid.', translation: 'Tohumu ek.', color: 'tan' },
         { word: 'Soil', sentence: 'Farming without soil.', pronunciation: 'Farmin vitvavt soyl.', translation: 'Topraksız tarım.', color: 'sienna' }
+    ],
+    'Fruits & Vegetables': [
+        // Meyveler
+        { word: 'Apple', sentence: 'I like to eat apples.', pronunciation: 'Ay layk tu iit epılz.', translation: 'Elma yemeyi severim.', color: 'lightpink' },
+        { word: 'Banana', sentence: 'Monkeys love bananas.', pronunciation: 'Mankıs lav benenaz.', translation: 'Maymunlar muzları sever.', color: 'lightyellow' },
+        { word: 'Watermelon', sentence: 'Watermelon is sweet and juicy.', pronunciation: 'Votermelın iz sviit end cusi.', translation: 'Karpuz tatlı ve suludur.', color: 'lightgreen' },
+        { word: 'Orange', sentence: 'I drink orange juice for breakfast.', pronunciation: 'Ay drink orinc cus for brekfıst.', translation: 'Kahvaltıda portakal suyu içerim.', color: 'peachpuff' },
+        { word: 'Strawberry', sentence: 'Strawberries are my favorite fruit.', pronunciation: 'Stroberız ar may feyvırıt frut.', translation: 'Çilek benim en sevdiğim meyvedir.', color: 'lightcoral' },
+        // Sebzeler
+        { word: 'Carrot', sentence: 'Rabbits like to eat carrots.', pronunciation: 'Rebits layk tu iit kerıts.', translation: 'Tavşanlar havuç yemeyi sever.', color: 'lightsalmon' },
+        { word: 'Tomato', sentence: 'I put tomato in my salad.', pronunciation: 'Ay put tımeyto in may selıd.', translation: 'Salatanın içine domates koyuyorum.', color: 'tomato' },
+        { word: 'Potato', sentence: 'We can make French fries with potatoes.', pronunciation: 'Vi ken meyk frenç frayz vit pıteytoz.', translation: 'Patatesle kızartma yapabiliriz.', color: 'tan' },
+        { word: 'Spinach', sentence: 'Spinach makes you strong.', pronunciation: 'Spinic meyks yu strong.', translation: 'Ispanak seni güçlü yapar.', color: 'lightgreen' },
+        { word: 'Cucumber', sentence: 'Cucumber is cool and fresh.', pronunciation: 'Kyükımbır iz kul end freş.', translation: 'Salatalık serin ve tazedir.', color: 'mintcream' }
     ]
 };
 

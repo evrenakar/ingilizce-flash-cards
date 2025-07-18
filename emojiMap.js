@@ -48,6 +48,18 @@ const emojiMap = {
     'Tea': '🍵',
     'Coffee': '☕',
     'Bread': '🍞',
+
+    // Fruits & Vegetables
+    'Carrot': '🥕',
+    'Potato': '🥔',
+    'Spinach': '🥬',
+    'Cucumber': '🥒',
+    'Strawberry': '🍓',
+    'Watermelon': '🍉',
+    'Orange': '🍊',
+    'Grape': '🍇',
+    'Blueberry': 'berry',
+    'Tomato': '🍅',
     
     // Toys
     'Ball': '⚽',
