@@ -118,10 +118,10 @@ function createHtmlFlashcards() {
                 }
                 
                 .card-emoji {
-                    font-size: 60px;
+                    font-size: 70px;
                     text-align: center;
-                    margin: 8px 0;
-                    line-height: 1.2;
+                    margin: 6px 0;
+                    line-height: 1.1;
                 }
                 
                 .card-sentence {
