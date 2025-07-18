@@ -29,41 +29,74 @@ Bu proje, çocuklar için İngilizce kelime öğrenmeye yardımcı olmak amacıy
 
 ## Kullanım
 
-Flash kartları oluşturmak için aşağıdaki komutu çalıştırın:
+Projedeki scriptleri kullanarak flash kartları farklı formatlarda oluşturabilirsiniz:
+
+### PDF Kartlar Oluşturma
 ```bash
 node createFlashcards.js
 ```
+Bu komut, `pdf` klasörü içinde her tema için ayrı bir PDF dosyası oluşturur. Kartlar tema renklerine göre gruplandırılır ve her sayfada 12 kart yer alır.
 
-Bu komut, `pdf` klasörü içinde her tema için ayrı bir PDF dosyası oluşturacaktır.
+### HTML Kartlar Oluşturma
+```bash
+node createHtmlFlashcards.js
+```
+Bu komut, `html` klasörü içinde her tema için ayrı bir HTML dosyası oluşturur. HTML dosyaları doğrudan tarayıcıda açılabilir, emoji desteği içerir ve yazdırmak için optimize edilmiştir. Her A4 sayfada 12 kart bulunur.
+
+### HTML'den PDF Oluşturma
+```bash
+node htmlToPdf.js
+```
+Bu komut, `html` klasöründeki HTML dosyalarını `pdf-from-html` klasöründe PDF dosyalarına dönüştürür. Bu PDF'ler, normal PDF'lerin aksine tam emoji desteği içerir ve yazdırırken arka plan renkleri korunur.
 
 ## Teknolojiler
 
 - Node.js
-- PDF oluşturma: pdfkit ve pdf-lib
+- PDF oluşturma: pdfkit
+- HTML'den PDF dönüştürme: puppeteer
+- Emoji desteği
 - Paket yönetimi: yarn
 
 ## Proje Yapısı
 
 ```
 ingilizce-flashcards/
-├── createFlashcards.js   # Flash kart oluşturma script'i
-├── package.json          # Bağımlılıklar ve proje bilgileri
-├── pdf/                  # Oluşturulan PDF dosyaları
-└── README.md             # Proje dokümantasyonu
+├── createFlashcards.js   # PDF flash kart oluşturma script'i
+├── createHtmlFlashcards.js # HTML flash kart oluşturma script'i
+├── htmlToPdf.js         # HTML'den PDF dönüştürme script'i
+├── emojiMap.js          # Emoji eşleşme haritası
+├── themes.js            # Tema ve kelime verileri
+├── package.json         # Bağımlılıklar ve proje bilgileri
+├── pdf/                 # Oluşturulan PDF dosyaları
+├── html/                # Oluşturulan HTML dosyaları
+├── pdf-from-html/       # HTML'den dönüştürülen PDF dosyaları
+└── README.md            # Proje dokümantasyonu
 ```
 
 ## Temalar
 
+Projede şu temalar bulunmaktadır:
+
 1. Hayvanlar (Animals)
 2. Renkler (Colors)
-3. Meyveler & Sebzeler (Fruits & Vegetables)
+3. Yiyecek & İçecekler (Food & Drinks)
 4. Sayılar (Numbers)
 5. Aile (Family)
 6. Oyuncaklar (Toys)
 7. Kıyafetler (Clothes)
 8. Vücut Bölümleri (Body Parts)
-9. Günlük Eylemler (Daily Actions)
-10. Hava Durumu (Weather)
+9. Şekiller (Shapes)
+10. Hava Durumu & Mevsimler (Weather & Seasons)
+11. Sınıf Eşyaları (Classroom Objects)
+12. Duygular & Hisler (Feelings & Emotions)
+13. Ev & Mobilya (House & Furniture)
+14. Oyun Alanı (Playground)
+15. Günler (Days)
+16. Sınıf Kuralları (Classroom Rules)
+17. Selamlaşma & Temel Deyimler (Greetings & Basics)
+18. Nazik İstekler (Polite Requests)
+19. Günlük Aktiviteler (Daily Actions)
+20. Bilim (Science)
 
 ## Katkıda Bulunma
 
