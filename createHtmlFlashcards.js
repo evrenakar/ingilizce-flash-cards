@@ -77,7 +77,7 @@ function createHtmlFlashcards() {
                 
                 body {
                     font-family: Arial, sans-serif;
-                    margin: 15px;
+                    margin: 5px;
                 }
                 
                 .page {
@@ -94,7 +94,7 @@ function createHtmlFlashcards() {
                     grid-template-columns: repeat(4, 1fr);
                     grid-template-rows: repeat(3, 1fr);
                     gap: 10px;
-                    height: 100%;
+                    height: 97%;
                     margin: 0;
                 }
                 
@@ -106,7 +106,7 @@ function createHtmlFlashcards() {
                     flex-direction: column;
                     justify-content: space-between;
                     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                    height: 100%;
+                    height: calc(100% - 40px);
                     box-sizing: border-box;
                 }
                 
@@ -118,9 +118,10 @@ function createHtmlFlashcards() {
                 }
                 
                 .card-emoji {
-                    font-size: 40px;
+                    font-size: 60px;
                     text-align: center;
-                    margin: 10px 0;
+                    margin: 8px 0;
+                    line-height: 1.2;
                 }
                 
                 .card-sentence {

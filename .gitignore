@@ -1,5 +1,7 @@
 # PDF klasörü
 /pdf/
+/pdf-from-html/
+/html/
 
 # Node.js dependencies
 /node_modules/
