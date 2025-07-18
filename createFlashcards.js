@@ -2,6 +2,219 @@ const PDFDocument = require('pdfkit');
 const fs = require('fs');
 const path = require('path');
 
+// Kelime-emoji eşleştirme fonksiyonu
+function getEmojiForWord(word) {
+    // Kelime-emoji eşleştirme tablosu
+    const emojiMap = {
+        // Colors
+        'Red': '🔴',
+        'Blue': '🔵',
+        'Green': '🟢',
+        'Yellow': '🟡',
+        'Purple': '🟣',
+        'Pink': '🎀',
+        'Orange': '🟠',
+        'Brown': '🟤',
+        'Black': '⚫',
+        'White': '⚪',
+        
+        // Animals
+        'Dog': '🐕',
+        'Cat': '🐈',
+        'Bird': '🐦',
+        'Butterfly': '🦋',
+        'Duck': '🦆',
+        'Fish': '🐟',
+        'Rabbit': '🐇',
+        'Snake': '🐍',
+        
+        // Food & Drinks
+        'Apple': '🍎',
+        'Banana': '🍌',
+        'Sandwich': '🥪',
+        'Soup': '🍲',
+        'Salad': '🥗',
+        'Spaghetti': '🍝',
+        'Chicken': '🍗',
+        
+        // Toys
+        'Ball': '⚽',
+        'Doll': '👧',
+        'Car': '🚗',
+        'Train': '🚂',
+        'Lego': '🧱',
+        'Puzzle': '🧩',
+        'Boat': '🚢',
+        'Plane': '✈️',
+        
+        // Clothes
+        'Shoes': '👞',
+        'T-shirt': '👕',
+        'Dress': '👗',
+        'Skirt': '👗',
+        'Pants': '👖',
+        'Socks': '🧦',
+        'Scarf': '🧣',
+        'Gloves': '🧤',
+        'Sweater': '🧥',
+        'Umbrella': '☂️',
+        'Raincoat': '🧥',
+        'Rainboots': '👢',
+        'Cap': '🧢',
+        'Sunglasses': '🕶️',
+        'Slippers': '🥿',
+        
+        // Body Parts
+        'Head': '👤',
+        'Nose': '👃',
+        'Mouth': '👄',
+        'Ear': '👂',
+        'Eye': '👁️',
+        'Hand': '👋',
+        'Leg': '🦵',
+        'Foot': '🦶',
+        
+        // Numbers
+        'One': '1️⃣',
+        'Two': '2️⃣',
+        'Three': '3️⃣',
+        'Four': '4️⃣',
+        'Five': '5️⃣',
+        
+        // Family
+        'Mother': '👩',
+        'Father': '👨',
+        'Sister': '👧',
+        'Brother': '👦',
+        'Baby': '👶',
+        'Grandmother': '👵',
+        'Grandfather': '👴',
+        
+        // Weather & Seasons
+        'Sunny': '☀️',
+        'Rainy': '🌧️',
+        'Windy': '💨',
+        'Cloudy': '☁️',
+        'Spring': '🌸',
+        'Summer': '☀️',
+        'Fall': '🍂',
+        'Winter': '❄️',
+        
+        // Classroom Objects
+        'Book': '📚',
+        'Pencil': '✏️',
+        'Ruler': '📏',
+        'Notebook': '📓',
+        'Backpack': '🎒',
+        'Scissors': '✂️',
+        'Glue': '🧴',
+        'Sharpener': '🔍',
+        'Eraser': '🧹',
+        'Window': '🪟',
+        'Door': '🚪',
+        
+        // Feelings & Emotions
+        'Happy': '😀',
+        'Sad': '😢',
+        'Angry': '😠',
+        'Hungry': '😋',
+        'Thirsty': '🥤',
+        'Scared': '😱',
+        'Tired': '😴',
+        
+        // Shapes
+        'Circle': '⭕',
+        'Triangle': '🔺',
+        'Square': '⬛',
+        'Heart': '❤️',
+        'Star': '⭐',
+        'Rectangle': '▬',
+        
+        // House & Furniture
+        'House': '🏠',
+        'Chair': '🪑',
+        'Table': '🪓',
+        'Bed': '🛏️',
+        'Sofa': '🛋️',
+        'Kitchen': '🍳',
+        'Bathroom': '🚿',
+        
+        // Playground
+        'Slide': '🛝',
+        'Swing': '🔄',
+        'Seesaw': '⚖️',
+        'Map': '🗺️',
+        'Bottle': '🍼',
+        
+        // Days
+        'Monday': '📅',
+        'Tuesday': '📅',
+        'Wednesday': '📅',
+        'Thursday': '📅',
+        'Friday': '📅',
+        'Saturday': '📅',
+        'Sunday': '📅',
+        
+        // Daily Actions
+        'Eat': '🍽️',
+        'Sleep': '💤',
+        'Run': '🏃',
+        'Walk': '🚶',
+        'Jump': '⬆️',
+        'Dance': '💃',
+        'Swim': '🏊',
+        'Draw': '🖌️',
+        'Read': '📖',
+        'Write': '✍️',
+        'Count': '🔢',
+        'Bounce': '⚾',
+        'Row': '🚣',
+        
+        // Science
+        'Fossil': '🦴',
+        'Archeology': '🏺',
+        'Magnetism': '🧲',
+        'Volcano': '🌋',
+        'Eruption': '💥',
+        'Rainbow': '🌈',
+        'Seed': '🌱',
+        'Soil': '🌱',
+        
+        // Greetings & Basics
+        'Hello': '👋',
+        'Goodbye': '👋',
+        'Yes': '✅',
+        'No': '❌',
+        'Stand up': '🧍',
+        'Sit down': '🪑',
+        'Open': '📖',
+        'Close': '📕',
+        'I like': '👍',
+        'I don\'t like': '👎',
+        
+        // Polite Requests
+        'Thank you': '🙏',
+        'Please': '🙏',
+        'You\'re welcome': '😊',
+        'Here you are': '👐',
+        'Excuse me': '🙋',
+        
+        // Classroom Rules
+        'Listen': '👂',
+        'Be quiet': '🤫',
+        'Raise your hand': '🙋',
+        'Share': '🤝',
+        'Help': '🆘',
+        'Be kind': '❤️',
+        'Wait': '⏰',
+        'Take turns': '🔄',
+        'Clean up': '🧹'
+    };
+    
+    // Eşleştirme tablosunda kelime varsa emojiyi döndür, yoksa boş string döndür
+    return emojiMap[word] || '';
+}
+
 function createPDFs() {
     // Her tema için ayrı PDF dosyası oluşturacağız
     const createdFiles = [];
@@ -303,21 +516,35 @@ function createPDFs() {
             const xPos = margin + (xOffset * (cardWidth + spaceBetween));
             const yPos = margin + (yOffset * (cardHeight + spaceBetween));
 
-            // Kart arka planı
+            // Kartın çerçevesini ve arka plan rengini çiz
             doc.rect(xPos, yPos, cardWidth, cardHeight)
                 .fillAndStroke(card.color, '#999999');
 
-            // Kelime başlığı - daha büyük ve belirgin
-            doc.fillColor('black').fontSize(16).font('/System/Library/Fonts/Supplemental/Arial Bold.ttf')
-                .text(card.word, xPos + 10, yPos + 10, { width: cardWidth - 20, align: 'center' });
+            // Kelime için emojiyi al
+            const emoji = getEmojiForWord(card.word);
 
-            // Görsel için boşluk bırak - dikkat çekici bir çerçeve içinde
+            // Sadece kelimeyi kart üst kısmına yerleştir (emoji olmadan)
+            doc.fillColor('black').fontSize(16).font('/System/Library/Fonts/Supplemental/Arial Bold.ttf')
+               .text(card.word, xPos + 10, yPos + 10, { width: cardWidth - 20, align: 'center' });
+
+            // Görsel için boşluk bırak - çerçeve içinde emoji göster
             const imageAreaHeight = 100; // Görsel alanının yüksekliği
             doc.rect(xPos + 20, yPos + 40, cardWidth - 40, imageAreaHeight)
                 .lineWidth(1)
                 .stroke('#555555');
-            doc.fontSize(9).fillColor('#555555')
-                .text('Görsel Alanı', xPos + 20, yPos + 40 + (imageAreaHeight / 2 - 5), { width: cardWidth - 40, align: 'center' });
+            
+            if (emoji) {
+                // Görsel alanında emojiyi göster
+                doc.fontSize(50) // Emoji boyutu
+                   .fillColor('black')
+                   .text(emoji, xPos + 20, yPos + 40 + (imageAreaHeight / 2 - 30), 
+                         { width: cardWidth - 40, align: 'center' });
+            } else {
+                // Emoji yoksa görsel alanı yazısını göster
+                doc.fontSize(9).fillColor('#555555')
+                   .text('Görsel Alanı', xPos + 20, yPos + 40 + (imageAreaHeight / 2 - 5), 
+                         { width: cardWidth - 40, align: 'center' });
+            }
 
             // Alt kısımda örnek cümle ve çevirisi
             doc.font('/System/Library/Fonts/Supplemental/Arial.ttf').fillColor('black')
