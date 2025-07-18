@@ -1,0 +1,219 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Numbers - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">One</div>
+                        <div class="card-emoji">1️⃣</div>
+                        <div class="card-sentence">I have one ball.</div>
+                        <div class="card-translation">Bir topum var.</div>
+                    </div>
+                    <div class="card" style="background-color: lightpink">
+                        <div class="card-word">Two</div>
+                        <div class="card-emoji">2️⃣</div>
+                        <div class="card-sentence">I have two feet.</div>
+                        <div class="card-translation">İki ayağım var.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Three</div>
+                        <div class="card-emoji">3️⃣</div>
+                        <div class="card-sentence">How many legs does it have? Three legs.</div>
+                        <div class="card-translation">Kaç bacağı var? Üç bacak.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Four</div>
+                        <div class="card-emoji">4️⃣</div>
+                        <div class="card-sentence">I have four crayons.</div>
+                        <div class="card-translation">Dört pastel boyam var.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Five</div>
+                        <div class="card-emoji">5️⃣</div>
+                        <div class="card-sentence">I want five apples.</div>
+                        <div class="card-translation">Beş elma istiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lavender">
+                        <div class="card-word">Six</div>
+                        <div class="card-emoji">6️⃣</div>
+                        <div class="card-sentence">Count to six.</div>
+                        <div class="card-translation">Altıya kadar say.</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Seven</div>
+                        <div class="card-emoji">7️⃣</div>
+                        <div class="card-sentence">There are seven days in a week.</div>
+                        <div class="card-translation">Bir haftada yedi gün vardır.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Eight</div>
+                        <div class="card-emoji">8️⃣</div>
+                        <div class="card-sentence">I have eight fingers.</div>
+                        <div class="card-translation">Sekiz parmağım var.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsteelblue">
+                        <div class="card-word">Nine</div>
+                        <div class="card-emoji">9️⃣</div>
+                        <div class="card-sentence">Nine is after eight.</div>
+                        <div class="card-translation">Dokuz sekizden sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Ten</div>
+                        <div class="card-emoji">🔟</div>
+                        <div class="card-sentence">I count to ten.</div>
+                        <div class="card-translation">Ona kadar sayarım.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Eleven</div>
+                        <div class="card-emoji">1️⃣1️⃣</div>
+                        <div class="card-sentence">Eleven is after ten.</div>
+                        <div class="card-translation">Onbir ondan sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsteelblue">
+                        <div class="card-word">Twelve</div>
+                        <div class="card-emoji">1️⃣2️⃣</div>
+                        <div class="card-sentence">Twelve is after eleven.</div>
+                        <div class="card-translation">Oniki onbirden sonra gelir.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Thirteen</div>
+                        <div class="card-emoji">1️⃣3️⃣</div>
+                        <div class="card-sentence">Thirteen is after twelve.</div>
+                        <div class="card-translation">Onüç onikiden sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Fourteen</div>
+                        <div class="card-emoji">1️⃣4️⃣</div>
+                        <div class="card-sentence">Fourteen is after thirteen.</div>
+                        <div class="card-translation">Ondört onüçden sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsteelblue">
+                        <div class="card-word">Fifteen</div>
+                        <div class="card-emoji">1️⃣5️⃣</div>
+                        <div class="card-sentence">Fifteen is after fourteen.</div>
+                        <div class="card-translation">Onbeş ondörtten sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Sixteen</div>
+                        <div class="card-emoji">1️⃣6️⃣</div>
+                        <div class="card-sentence">Sixteen is after fifteen.</div>
+                        <div class="card-translation">Onaltı onbeşden sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Seventeen</div>
+                        <div class="card-emoji">1️⃣7️⃣</div>
+                        <div class="card-sentence">Seventeen is after sixteen.</div>
+                        <div class="card-translation">Onyedi onaltıdan sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsteelblue">
+                        <div class="card-word">Eighteen</div>
+                        <div class="card-emoji">1️⃣8️⃣</div>
+                        <div class="card-sentence">Eighteen is after seventeen.</div>
+                        <div class="card-translation">Onsekiz onyediden sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Nineteen</div>
+                        <div class="card-emoji">1️⃣9️⃣</div>
+                        <div class="card-sentence">Nineteen is after eighteen.</div>
+                        <div class="card-translation">Onbirsekiz onsekizden sonra gelir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Twenty</div>
+                        <div class="card-emoji">2️⃣0️⃣</div>
+                        <div class="card-sentence">Twenty is after nineteen.</div>
+                        <div class="card-translation">Onikinci onbirsekizden sonra gelir.</div>
+                    </div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

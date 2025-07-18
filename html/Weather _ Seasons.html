@@ -1,0 +1,161 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Weather & Seasons - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Sunny</div>
+                        <div class="card-emoji">☀️</div>
+                        <div class="card-sentence">It's sunny in summer.</div>
+                        <div class="card-translation">Yazın hava güneşli.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Rainy</div>
+                        <div class="card-emoji">🌧️</div>
+                        <div class="card-sentence">It's rainy in spring.</div>
+                        <div class="card-translation">İlkbaharda yağmurlu.</div>
+                    </div>
+                    <div class="card" style="background-color: white">
+                        <div class="card-word">Snowy</div>
+                        <div class="card-emoji">🌨️</div>
+                        <div class="card-sentence">It's snowy in winter.</div>
+                        <div class="card-translation">Kışın karlı.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgray">
+                        <div class="card-word">Windy</div>
+                        <div class="card-emoji">💨</div>
+                        <div class="card-sentence">It's windy today.</div>
+                        <div class="card-translation">Bugün rüzgarlı.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Hot</div>
+                        <div class="card-emoji">🔥</div>
+                        <div class="card-sentence">Summer is hot.</div>
+                        <div class="card-translation">Yaz sıcaktır.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Cold</div>
+                        <div class="card-emoji">❄️</div>
+                        <div class="card-sentence">Winter is cold.</div>
+                        <div class="card-translation">Kış soğuktur.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Spring</div>
+                        <div class="card-emoji">🌸</div>
+                        <div class="card-sentence">Flowers bloom in spring.</div>
+                        <div class="card-translation">İlkbaharda çiçekler açar.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Summer</div>
+                        <div class="card-emoji">🏊</div>
+                        <div class="card-sentence">We swim in summer.</div>
+                        <div class="card-translation">Yazın yüzeriz.</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Fall</div>
+                        <div class="card-emoji">🍂</div>
+                        <div class="card-sentence">Leaves fall in fall.</div>
+                        <div class="card-translation">Sonbaharda yapraklar düşer.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Winter</div>
+                        <div class="card-emoji">🧥</div>
+                        <div class="card-sentence">We wear coats in winter.</div>
+                        <div class="card-translation">Kışın palto giyeriz.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Buoyancy</div>
+                        <div class="card-emoji">🚢</div>
+                        <div class="card-sentence">How the ship sail? Learning the buoyancy of water.</div>
+                        <div class="card-translation">Gemi nasıl yüzer? Suyun kaldırma kuvvetini öğreniyoruz.</div>
+                    </div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

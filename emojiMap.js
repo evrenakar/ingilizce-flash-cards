@@ -21,6 +21,14 @@ const emojiMap = {
     'Fish': '🐟',
     'Rabbit': '🐇',
     'Snake': '🐍',
+    'Horse': '🐎',
+    'Turtle': '🐢',
+    'Monkey': '🐒',
+    'Frog': '🐸',
+    'Mouse': '🐁',
+    'Chicken': '🐔',
+    'Cow': '🐄',
+    'Pig': '🐖',
     
     // Food & Drinks
     'Apple': '🍎',
@@ -30,16 +38,30 @@ const emojiMap = {
     'Salad': '🥗',
     'Spaghetti': '🍝',
     'Chicken': '🍗',
+    'Pizza': '🍕',
+    'Hamburger': '🍔',
+    'Ice Cream': '🍦',
+    'Water': '💧',
+    'Milk': '🥛',
+    'Egg': '🥚',
+    'Cheese': '🧀',
+    'Honey': '🍯',
+    'Tea': '🍵',
+    'Coffee': '☕',
+    'Bread': '🍞',
     
     // Toys
     'Ball': '⚽',
-    'Doll': '👧',
     'Car': '🚗',
     'Train': '🚂',
     'Lego': '🧱',
     'Puzzle': '🧩',
     'Boat': '🚢',
     'Plane': '✈️',
+    'Doll': '👶',
+    'Robot': '🤖',
+    'Kite': '🪁',
+    'Present': '🎁',
     
     // Clothes
     'Shoes': '👞',
@@ -50,13 +72,17 @@ const emojiMap = {
     'Socks': '🧦',
     'Scarf': '🧣',
     'Gloves': '🧤',
-    'Sweater': '🧥',
+    'Sweater': '👚',
     'Umbrella': '☂️',
     'Raincoat': '🧥',
     'Rainboots': '👢',
     'Cap': '🧢',
     'Sunglasses': '🕶️',
     'Slippers': '🥿',
+    'Shorts': '🩳',
+    'Coat': '👖',
+    'Hat': '🧢',
+
     
     // Body Parts
     'Head': '👤',
@@ -67,6 +93,8 @@ const emojiMap = {
     'Hand': '👋',
     'Leg': '🦵',
     'Foot': '🦶',
+    'Tongue': '👅',
+    'Arm': '💪',
     
     // Numbers
     'One': '1️⃣',
@@ -74,9 +102,26 @@ const emojiMap = {
     'Three': '3️⃣',
     'Four': '4️⃣',
     'Five': '5️⃣',
+    'Six': '6️⃣',
+    'Seven': '7️⃣',
+    'Eight': '8️⃣',
+    'Nine': '9️⃣',
+    'Ten': '🔟',
+    'Eleven': '1️⃣1️⃣',
+    'Twelve': '1️⃣2️⃣',
+    'Thirteen': '1️⃣3️⃣',
+    'Fourteen': '1️⃣4️⃣',
+    'Fifteen': '1️⃣5️⃣',
+    'Sixteen': '1️⃣6️⃣',
+    'Seventeen': '1️⃣7️⃣',
+    'Eighteen': '1️⃣8️⃣',
+    'Nineteen': '1️⃣9️⃣',
+    'Twenty': '2️⃣0️⃣',
     
     // Family
     'Mother': '👩',
+    'Mom': '👩',
+    'Dad': '👨',
     'Father': '👨',
     'Sister': '👧',
     'Brother': '👦',
@@ -89,11 +134,19 @@ const emojiMap = {
     'Rainy': '🌧️',
     'Windy': '💨',
     'Cloudy': '☁️',
+    'Rain': '🌧️',
+    'Snowy': '🌨️',
+    'Sun': '☀️',
+    'Cloud': '☁️',
     'Spring': '🌸',
-    'Summer': '☀️',
+    'Summer': '🏊',
     'Fall': '🍂',
-    'Winter': '❄️',
-    
+    'Winter': '🧥',
+    'Cold': '❄️',
+    'Hot': '🔥',
+    'Buoyancy': '🚢',
+    'Swim': '🏊',
+
     // Classroom Objects
     'Book': '📚',
     'Pencil': '✏️',
@@ -115,30 +168,40 @@ const emojiMap = {
     'Thirsty': '🥤',
     'Scared': '😱',
     'Tired': '😴',
+    'Surprised': '😮',
+    'Sleepy': '😴',
     
     // Shapes
     'Circle': '⭕',
     'Triangle': '🔺',
     'Square': '⬛',
-    'Heart': '❤️',
+    'Heart': '💖',
     'Star': '⭐',
     'Rectangle': '▬',
     
     // House & Furniture
     'House': '🏠',
     'Chair': '🪑',
-    'Table': '🪓',
+    'Table': '',
     'Bed': '🛏️',
     'Sofa': '🛋️',
     'Kitchen': '🍳',
     'Bathroom': '🚿',
+    'Living room': '🛋️',
+    'Bedroom': '🛏️',
+    'Bathroom': '🚿',
+    'Fridge': '❄️',
+    'Television': '📺',
+    'Table': '🪑',
     
     // Playground
     'Slide': '🛝',
     'Swing': '🔄',
     'Seesaw': '⚖️',
     'Map': '🗺️',
-    'Bottle': '🍼',
+    'Ferris wheel': '🎡',
+    'Sandbox': '🏖️',
+    'Bottle': '💧',
     
     // Days
     'Monday': '📅',
@@ -163,6 +226,11 @@ const emojiMap = {
     'Count': '🔢',
     'Bounce': '⚾',
     'Row': '🚣',
+    'Sing': '🎤',
+    'Play': '🎮',
+    'Tidy up': '🧹',
+    'Dig': '⛏️',
+
     
     // Science
     'Fossil': '🦴',
@@ -173,6 +241,7 @@ const emojiMap = {
     'Rainbow': '🌈',
     'Seed': '🌱',
     'Soil': '🌱',
+    'Pickaxe': '⛏️',
     
     // Greetings & Basics
     'Hello': '👋',
@@ -185,6 +254,9 @@ const emojiMap = {
     'Close': '📕',
     'I like': '👍',
     'I don\'t like': '👎',
+    'My school': '🏫',
+    'My friends': '👧',
+    'My teacher': '👩',
     
     // Polite Requests
     'Thank you': '🙏',
@@ -202,7 +274,10 @@ const emojiMap = {
     'Be kind': '❤️',
     'Wait': '⏰',
     'Take turns': '🔄',
-    'Clean up': '🧹'
+    'Clean up': '🧹',
+    'Don\'t run': '🏃',
+    'Turn off/on': '💡',
+    'Look at': '👀',
 };
 
 // Kelime-emoji eşleştirme fonksiyonu

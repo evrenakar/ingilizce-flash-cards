@@ -1,0 +1,167 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Food & Drinks - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: white">
+                        <div class="card-word">Milk</div>
+                        <div class="card-emoji">🥛</div>
+                        <div class="card-sentence">I want some milk.</div>
+                        <div class="card-translation">Biraz süt istiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: tan">
+                        <div class="card-word">Bread</div>
+                        <div class="card-emoji">🍞</div>
+                        <div class="card-sentence">I want some bread.</div>
+                        <div class="card-translation">Biraz ekmek istiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Cheese</div>
+                        <div class="card-emoji">🧀</div>
+                        <div class="card-sentence">I like cheese.</div>
+                        <div class="card-translation">Peyniri severim.</div>
+                    </div>
+                    <div class="card" style="background-color: beige">
+                        <div class="card-word">Egg</div>
+                        <div class="card-emoji">🥚</div>
+                        <div class="card-sentence">I want an egg.</div>
+                        <div class="card-translation">Bir yumurta istiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: gold">
+                        <div class="card-word">Honey</div>
+                        <div class="card-emoji">🍯</div>
+                        <div class="card-sentence">I like honey.</div>
+                        <div class="card-translation">Balı severim.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Water</div>
+                        <div class="card-emoji">💧</div>
+                        <div class="card-sentence">I'm thirsty. I want some water.</div>
+                        <div class="card-translation">Susadım. Biraz su istiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Apple</div>
+                        <div class="card-emoji">🍎</div>
+                        <div class="card-sentence">I want an apple.</div>
+                        <div class="card-translation">Bir elma istiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Banana</div>
+                        <div class="card-emoji">🍌</div>
+                        <div class="card-sentence">I don’t like bananas.</div>
+                        <div class="card-translation">Muz sevmiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: wheat">
+                        <div class="card-word">Sandwich</div>
+                        <div class="card-emoji">🥪</div>
+                        <div class="card-sentence">What do you want in your sandwich?</div>
+                        <div class="card-translation">Sandviçine ne koymak istersin?</div>
+                    </div>
+                    <div class="card" style="background-color: lightsalmon">
+                        <div class="card-word">Soup</div>
+                        <div class="card-emoji">🍲</div>
+                        <div class="card-sentence">Soup is boiling.</div>
+                        <div class="card-translation">Çorba kaynıyor.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Salad</div>
+                        <div class="card-emoji">🥗</div>
+                        <div class="card-sentence">Do you like salad?</div>
+                        <div class="card-translation">Salatayı sever misin?</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Spaghetti</div>
+                        <div class="card-emoji">🍝</div>
+                        <div class="card-sentence">I want spaghetti.</div>
+                        <div class="card-translation">Spagetti istiyorum.</div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>

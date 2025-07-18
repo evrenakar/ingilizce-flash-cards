@@ -1,0 +1,213 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Clothes - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">T-shirt</div>
+                        <div class="card-emoji">👕</div>
+                        <div class="card-sentence">This is a blue T-shirt.</div>
+                        <div class="card-translation">Bu mavi bir tişört.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Shorts</div>
+                        <div class="card-emoji">🩳</div>
+                        <div class="card-sentence">These are blue shorts.</div>
+                        <div class="card-translation">Bunlar mavi şort.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgray">
+                        <div class="card-word">Coat</div>
+                        <div class="card-emoji">👖</div>
+                        <div class="card-sentence">I wear a coat in winter.</div>
+                        <div class="card-translation">Kışın palto giyerim.</div>
+                    </div>
+                    <div class="card" style="background-color: tan">
+                        <div class="card-word">Boots</div>
+                        <div class="card-emoji">👕</div>
+                        <div class="card-sentence">In winter, we wear boots.</div>
+                        <div class="card-translation">Kışın bot giyeriz.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Hat</div>
+                        <div class="card-emoji">🧢</div>
+                        <div class="card-sentence">Put on the hat!</div>
+                        <div class="card-translation">Şapkayı giy!</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Shoes</div>
+                        <div class="card-emoji">👞</div>
+                        <div class="card-sentence">My shoes are black.</div>
+                        <div class="card-translation">Ayakkabılarım siyah.</div>
+                    </div>
+                    <div class="card" style="background-color: lightpink">
+                        <div class="card-word">Dress</div>
+                        <div class="card-emoji">👗</div>
+                        <div class="card-sentence">This is a pink dress.</div>
+                        <div class="card-translation">Bu pembe bir elbise.</div>
+                    </div>
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Skirt</div>
+                        <div class="card-emoji">👗</div>
+                        <div class="card-sentence">This is a purple skirt.</div>
+                        <div class="card-translation">Bu mor bir etek.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Pants</div>
+                        <div class="card-emoji">👖</div>
+                        <div class="card-sentence">These are black pants.</div>
+                        <div class="card-translation">Bunlar siyah pantolon.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Socks</div>
+                        <div class="card-emoji">🧦</div>
+                        <div class="card-sentence">I'm wearing red socks.</div>
+                        <div class="card-translation">Kırmızı çoraplar giyiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Scarf</div>
+                        <div class="card-emoji">🧣</div>
+                        <div class="card-sentence">In winter, we wear scarves.</div>
+                        <div class="card-translation">Kışın atkı giyeriz.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Gloves</div>
+                        <div class="card-emoji">🧤</div>
+                        <div class="card-sentence">Put on your gloves!</div>
+                        <div class="card-translation">Eldivenlerini giy!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Sweater</div>
+                        <div class="card-emoji">👚</div>
+                        <div class="card-sentence">I'm wearing a sweater.</div>
+                        <div class="card-translation">Kazak giyiyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsteelblue">
+                        <div class="card-word">Umbrella</div>
+                        <div class="card-emoji">☂️</div>
+                        <div class="card-sentence">Take your umbrella.</div>
+                        <div class="card-translation">Şemsiyeni al.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Raincoat</div>
+                        <div class="card-emoji">🧥</div>
+                        <div class="card-sentence">Wear your raincoat.</div>
+                        <div class="card-translation">Yağmurluğunu giy.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Rainboots</div>
+                        <div class="card-emoji">👢</div>
+                        <div class="card-sentence">These are rainboots.</div>
+                        <div class="card-translation">Bunlar yağmur çizmeleri.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Cap</div>
+                        <div class="card-emoji">🧢</div>
+                        <div class="card-sentence">I wear a cap in summer.</div>
+                        <div class="card-translation">Yazın şapka giyerim.</div>
+                    </div>
+                    <div class="card" style="background-color: lavender">
+                        <div class="card-word">Sunglasses</div>
+                        <div class="card-emoji">🕶️</div>
+                        <div class="card-sentence">Put on your sunglasses.</div>
+                        <div class="card-translation">Güneş gözlüklerini tak.</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Slippers</div>
+                        <div class="card-emoji">🥿</div>
+                        <div class="card-sentence">These are slippers.</div>
+                        <div class="card-translation">Bunlar terlik.</div>
+                    </div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

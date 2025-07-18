@@ -1,0 +1,189 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Animals - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightgray">
+                        <div class="card-word">Horse</div>
+                        <div class="card-emoji">🐎</div>
+                        <div class="card-sentence">Horses run fast.</div>
+                        <div class="card-translation">Atlar hızlı koşar.</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Rabbit</div>
+                        <div class="card-emoji">🐇</div>
+                        <div class="card-sentence">Rabbits like carrots.</div>
+                        <div class="card-translation">Tavşanlar havuç sever.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Fish</div>
+                        <div class="card-emoji">🐟</div>
+                        <div class="card-sentence">A fish can swim.</div>
+                        <div class="card-translation">Balık yüzebilir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightpink">
+                        <div class="card-word">Butterfly</div>
+                        <div class="card-emoji">🦋</div>
+                        <div class="card-sentence">The butterfly is colorful.</div>
+                        <div class="card-translation">Kelebek renklidir.</div>
+                    </div>
+                    <div class="card" style="background-color: lavender">
+                        <div class="card-word">Cat</div>
+                        <div class="card-emoji">🐈</div>
+                        <div class="card-sentence">A cat says meow!</div>
+                        <div class="card-translation">Kedi miyav der!</div>
+                    </div>
+                    <div class="card" style="background-color: tan">
+                        <div class="card-word">Dog</div>
+                        <div class="card-emoji">🐕</div>
+                        <div class="card-sentence">Dog woofs/barks.</div>
+                        <div class="card-translation">Köpek havlar.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Turtle</div>
+                        <div class="card-emoji">🐢</div>
+                        <div class="card-sentence">The turtle is slow.</div>
+                        <div class="card-translation">Kaplumbağa yavaştır.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsalmon">
+                        <div class="card-word">Monkey</div>
+                        <div class="card-emoji">🐒</div>
+                        <div class="card-sentence">The monkey climbs trees.</div>
+                        <div class="card-translation">Maymun ağaçlara tırmanır.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Bird</div>
+                        <div class="card-emoji">🐦</div>
+                        <div class="card-sentence">A bird says tweet tweet.</div>
+                        <div class="card-translation">Kuş cik cik der.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Duck</div>
+                        <div class="card-emoji">🦆</div>
+                        <div class="card-sentence">The duck can swim.</div>
+                        <div class="card-translation">Ördek yüzebilir.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Frog</div>
+                        <div class="card-emoji">🐸</div>
+                        <div class="card-sentence">It's a big frog.</div>
+                        <div class="card-translation">Bu büyük bir kurbağa.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgray">
+                        <div class="card-word">Mouse</div>
+                        <div class="card-emoji">🐁</div>
+                        <div class="card-sentence">I'm a mouse. Squeak!</div>
+                        <div class="card-translation">Ben bir fareyim. Cik cik!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Chicken</div>
+                        <div class="card-emoji">🍗</div>
+                        <div class="card-sentence">Chicken lives in a farm.</div>
+                        <div class="card-translation">Tavuk çiftlikte yaşar.</div>
+                    </div>
+                    <div class="card" style="background-color: white">
+                        <div class="card-word">Cow</div>
+                        <div class="card-emoji">🐄</div>
+                        <div class="card-sentence">The cow gives milk.</div>
+                        <div class="card-translation">İnek süt verir.</div>
+                    </div>
+                    <div class="card" style="background-color: pink">
+                        <div class="card-word">Pig</div>
+                        <div class="card-emoji">🐖</div>
+                        <div class="card-sentence">Pigs like mud.</div>
+                        <div class="card-translation">Domuzlar çamuru sever.</div>
+                    </div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

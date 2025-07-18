@@ -1,0 +1,161 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Toys - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Boat</div>
+                        <div class="card-emoji">🚢</div>
+                        <div class="card-sentence">I'm playing with my boat.</div>
+                        <div class="card-translation">Teknemle oynuyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgray">
+                        <div class="card-word">Plane</div>
+                        <div class="card-emoji">✈️</div>
+                        <div class="card-sentence">I'm playing with my plane.</div>
+                        <div class="card-translation">Uçağımla oynuyorum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Lego</div>
+                        <div class="card-emoji">🧱</div>
+                        <div class="card-sentence">I build with lego.</div>
+                        <div class="card-translation">Lego ile inşa ederim.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">Puzzle</div>
+                        <div class="card-emoji">🧩</div>
+                        <div class="card-sentence">The puzzle is fun.</div>
+                        <div class="card-translation">Yapboz eğlenceli.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Car</div>
+                        <div class="card-emoji">🚗</div>
+                        <div class="card-sentence">This is a toy car.</div>
+                        <div class="card-translation">Bu bir oyuncak araba.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Train</div>
+                        <div class="card-emoji">🚂</div>
+                        <div class="card-sentence">The train goes choo-choo.</div>
+                        <div class="card-translation">Tren çuf çuf gider.</div>
+                    </div>
+                    <div class="card" style="background-color: lightpink">
+                        <div class="card-word">Doll</div>
+                        <div class="card-emoji">👶</div>
+                        <div class="card-sentence">She loves her doll.</div>
+                        <div class="card-translation">Bebeğini seviyor.</div>
+                    </div>
+                    <div class="card" style="background-color: lavender">
+                        <div class="card-word">Robot</div>
+                        <div class="card-emoji">🤖</div>
+                        <div class="card-sentence">The robot can dance.</div>
+                        <div class="card-translation">Robot dans edebilir.</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Ball</div>
+                        <div class="card-emoji">⚽</div>
+                        <div class="card-sentence">I have a ball.</div>
+                        <div class="card-translation">Bir topum var.</div>
+                    </div>
+                    <div class="card" style="background-color: lightsteelblue">
+                        <div class="card-word">Kite</div>
+                        <div class="card-emoji">🪁</div>
+                        <div class="card-sentence">The kite flies high.</div>
+                        <div class="card-translation">Uçurtma yüksekte uçar.</div>
+                    </div>
+                    <div class="card" style="background-color: plum">
+                        <div class="card-word">Present</div>
+                        <div class="card-emoji">🎁</div>
+                        <div class="card-sentence">I have a present for you.</div>
+                        <div class="card-translation">Senin için bir hediyem var.</div>
+                    </div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

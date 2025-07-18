@@ -1,0 +1,137 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Greetings & Basics - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">What's your name?</div>
+                        <div class="card-emoji">👋</div>
+                        <div class="card-sentence">What's your name? I'm Tom.</div>
+                        <div class="card-translation">Adın ne? Ben Tom.</div>
+                    </div>
+                    <div class="card" style="background-color: lightpink">
+                        <div class="card-word">I'm (name)</div>
+                        <div class="card-emoji">👋</div>
+                        <div class="card-sentence">I'm Nehir. Nice to meet you.</div>
+                        <div class="card-translation">Ben Nehir. Tanıştığıma memnun oldum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">My school</div>
+                        <div class="card-emoji">🏫</div>
+                        <div class="card-sentence">This is my school.</div>
+                        <div class="card-translation">Bu benim okulum.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">My friends</div>
+                        <div class="card-emoji">👧</div>
+                        <div class="card-sentence">These are my friends.</div>
+                        <div class="card-translation">Bunlar benim arkadaşlarım.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">My teacher</div>
+                        <div class="card-emoji">👩</div>
+                        <div class="card-sentence">This is my teacher.</div>
+                        <div class="card-translation">Bu benim öğretmenim.</div>
+                    </div>
+                    <div class="card" style="background-color: lavender">
+                        <div class="card-word">Hello</div>
+                        <div class="card-emoji">👋</div>
+                        <div class="card-sentence">Hello, how are you?</div>
+                        <div class="card-translation">Merhaba, nasılsın?</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Goodbye</div>
+                        <div class="card-emoji">👋</div>
+                        <div class="card-sentence">Goodbye, see you tomorrow.</div>
+                        <div class="card-translation">Hoşça kal, yarın görüşürüz.</div>
+                    </div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

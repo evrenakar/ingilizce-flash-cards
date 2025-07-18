@@ -50,7 +50,17 @@ const themes = {
         { word: "Seven", sentence: "There are seven days in a week.", translation: "Bir haftada yedi gün vardır.", color: "peachpuff" },
         { word: "Eight", sentence: "I have eight fingers.", translation: "Sekiz parmağım var.", color: "lightcoral" },
         { word: "Nine", sentence: "Nine is after eight.", translation: "Dokuz sekizden sonra gelir.", color: "lightsteelblue" },
-        { word: "Ten", sentence: "I count to ten.", translation: "Ona kadar sayarım.", color: "plum" }
+        { word: "Ten", sentence: "I count to ten.", translation: "Ona kadar sayarım.", color: "plum" },
+        { word: "Eleven", sentence: "Eleven is after ten.", translation: "Onbir ondan sonra gelir.", color: "lightcoral" },
+        { word: "Twelve", sentence: "Twelve is after eleven.", translation: "Oniki onbirden sonra gelir.", color: "lightsteelblue" },
+        { word: "Thirteen", sentence: "Thirteen is after twelve.", translation: "Onüç onikiden sonra gelir.", color: "plum" },
+        { word: "Fourteen", sentence: "Fourteen is after thirteen.", translation: "Ondört onüçden sonra gelir.", color: "lightcoral" },
+        { word: "Fifteen", sentence: "Fifteen is after fourteen.", translation: "Onbeş ondörtten sonra gelir.", color: "lightsteelblue" },
+        { word: "Sixteen", sentence: "Sixteen is after fifteen.", translation: "Onaltı onbeşden sonra gelir.", color: "plum" },
+        { word: "Seventeen", sentence: "Seventeen is after sixteen.", translation: "Onyedi onaltıdan sonra gelir.", color: "lightcoral" },
+        { word: "Eighteen", sentence: "Eighteen is after seventeen.", translation: "Onsekiz onyediden sonra gelir.", color: "lightsteelblue" },
+        { word: "Nineteen", sentence: "Nineteen is after eighteen.", translation: "Onbirsekiz onsekizden sonra gelir.", color: "plum" },
+        { word: "Twenty", sentence: "Twenty is after nineteen.", translation: "Onikinci onbirsekizden sonra gelir.", color: "lightcoral" }
     ],
     "Family": [
         { word: "Mom", sentence: "This is my mom.", translation: "Bu benim annem.", color: "lightpink" },
@@ -190,7 +200,7 @@ const themes = {
     ],
     "Greetings & Basics": [
         { word: "What's your name?", sentence: "What's your name? I'm Tom.", translation: "Adın ne? Ben Tom.", color: "lightblue" },
-        { word: "I'm (name)", sentence: "I'm Ela. Nice to meet you.", translation: "Ben Ela. Tanıştığıma memnun oldum.", color: "lightpink" },
+        { word: "I'm (name)", sentence: "I'm Nehir. Nice to meet you.", translation: "Ben Nehir. Tanıştığıma memnun oldum.", color: "lightpink" },
         { word: "My school", sentence: "This is my school.", translation: "Bu benim okulum.", color: "lightyellow" },
         { word: "My friends", sentence: "These are my friends.", translation: "Bunlar benim arkadaşlarım.", color: "lightgreen" },
         { word: "My teacher", sentence: "This is my teacher.", translation: "Bu benim öğretmenim.", color: "lightcyan" },

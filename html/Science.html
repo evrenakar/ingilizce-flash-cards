@@ -1,0 +1,143 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Science - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: tan">
+                        <div class="card-word">Fossil</div>
+                        <div class="card-emoji">🦴</div>
+                        <div class="card-sentence">We found a fossil!</div>
+                        <div class="card-translation">Bir fosil bulduk!</div>
+                    </div>
+                    <div class="card" style="background-color: peachpuff">
+                        <div class="card-word">Archeology</div>
+                        <div class="card-emoji">🏺</div>
+                        <div class="card-sentence">We learn about archeology.</div>
+                        <div class="card-translation">Arkeoloji hakkında bilgi ediniyoruz.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgray">
+                        <div class="card-word">Pickaxe</div>
+                        <div class="card-emoji">⛏️</div>
+                        <div class="card-sentence">Use the pickaxe carefully.</div>
+                        <div class="card-translation">Kazmayı dikkatli kullan.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcoral">
+                        <div class="card-word">Volcano</div>
+                        <div class="card-emoji">🌋</div>
+                        <div class="card-sentence">The volcano is erupting!</div>
+                        <div class="card-translation">Volkan patlıyor!</div>
+                    </div>
+                    <div class="card" style="background-color: sienna">
+                        <div class="card-word">Eruption</div>
+                        <div class="card-emoji">💥</div>
+                        <div class="card-sentence">Look at the eruption!</div>
+                        <div class="card-translation">Patlamaya bak!</div>
+                    </div>
+                    <div class="card" style="background-color: violet">
+                        <div class="card-word">Rainbow</div>
+                        <div class="card-emoji">🌈</div>
+                        <div class="card-sentence">Let's create a rainbow!</div>
+                        <div class="card-translation">Hadi gökkuşağı yapalım!</div>
+                    </div>
+                    <div class="card" style="background-color: tan">
+                        <div class="card-word">Seed</div>
+                        <div class="card-emoji">🌱</div>
+                        <div class="card-sentence">Plant the seed.</div>
+                        <div class="card-translation">Tohumu ek.</div>
+                    </div>
+                    <div class="card" style="background-color: sienna">
+                        <div class="card-word">Soil</div>
+                        <div class="card-emoji">🌱</div>
+                        <div class="card-sentence">Farming without soil.</div>
+                        <div class="card-translation">Topraksız tarım.</div>
+                    </div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>

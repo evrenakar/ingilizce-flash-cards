@@ -1,0 +1,125 @@
+
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Polite Requests - Flash Cards</title>
+            <style>
+                @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                    }
+                    body {
+                        margin: 15px;
+                    }
+                    /* Yazdırma sırasında arka plan renklerini göster */
+                    * {
+                        -webkit-print-color-adjust: exact !important;
+                        color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+                }
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 15px;
+                }
+                
+                .page {
+                    width: 21cm;
+                    height: 29.7cm;
+                    overflow: hidden;
+                    page-break-after: always;
+                    position: relative;
+                    padding: 0;
+                }
+                
+                .cards-container {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    height: 100%;
+                    margin: 0;
+                }
+                
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .card-word {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                
+                .card-emoji {
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                .card-sentence {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                .card-translation {
+                    font-size: 14px;
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: auto;
+                }
+                
+                /* Tema başlığı kaldırıldı */
+            </style>
+        </head>
+        <body>
+            <div class="page">
+                <div class="cards-container">
+                    <div class="card" style="background-color: lightpink">
+                        <div class="card-word">Thank you</div>
+                        <div class="card-emoji">🙏</div>
+                        <div class="card-sentence">Thank you! You're welcome.</div>
+                        <div class="card-translation">Teşekkür ederim! Rica ederim.</div>
+                    </div>
+                    <div class="card" style="background-color: lightblue">
+                        <div class="card-word">Please</div>
+                        <div class="card-emoji">🙏</div>
+                        <div class="card-sentence">I want the book, please!</div>
+                        <div class="card-translation">Kitabı istiyorum, lütfen!</div>
+                    </div>
+                    <div class="card" style="background-color: lightyellow">
+                        <div class="card-word">You're welcome</div>
+                        <div class="card-emoji">😊</div>
+                        <div class="card-sentence">Thank you! You're welcome.</div>
+                        <div class="card-translation">Teşekkür ederim! Rica ederim.</div>
+                    </div>
+                    <div class="card" style="background-color: lightgreen">
+                        <div class="card-word">Here you are</div>
+                        <div class="card-emoji">👐</div>
+                        <div class="card-sentence">Can I have the pencil? Here you are.</div>
+                        <div class="card-translation">Kalemi alabilir miyim? Buyurun.</div>
+                    </div>
+                    <div class="card" style="background-color: lightcyan">
+                        <div class="card-word">Excuse me</div>
+                        <div class="card-emoji">🙋</div>
+                        <div class="card-sentence">Excuse me, teacher.</div>
+                        <div class="card-translation">Affedersiniz, öğretmenim.</div>
+                    </div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div><div class="card" style="visibility: hidden;"></div>
+                </div>
+            </div>
+        </body>
+        </html>
