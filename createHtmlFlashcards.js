@@ -137,6 +137,14 @@ function createHtmlFlashcards() {
                     margin-top: auto;
                 }
                 
+                .card-pronunciation {
+                    font-size: 13px;
+                    color: #444;
+                    text-align: center;
+                    font-style: italic;
+                    margin-bottom: 5px;
+                }
+                
                 /* Tema başlığı kaldırıldı */
             </style>
         </head>
@@ -167,6 +175,7 @@ function createHtmlFlashcards() {
                         <div class="card-word">${card.word}</div>
                         <div class="card-emoji">${emoji}</div>
                         <div class="card-sentence">${card.sentence}</div>
+                        ${card.pronunciation ? `<div class="card-pronunciation">${card.pronunciation}</div>` : ''}
                         <div class="card-translation">${card.translation}</div>
                     </div>`;
             }
