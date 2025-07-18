@@ -11,7 +11,7 @@ const themes = {
         { word: "Bird", sentence: "A bird says tweet tweet.", translation: "Kuş cik cik der.", color: "lightyellow" },
         { word: "Duck", sentence: "The duck can swim.", translation: "Ördek yüzebilir.", color: "lightcyan" },
         { word: "Frog", sentence: "It's a big frog.", translation: "Bu büyük bir kurbağa.", color: "lightgreen" },
-        { word: "Mouse", sentence: "I'm a mouse. Squeak!", translation: "Ben bir fareyim. Cik cik!", color: "lightgray" },
+        { word: "Mouse", sentence: "I'm a mouse. Squeak!", translation: "Ben bir fareyim. Vik Vik!", color: "lightgray" },
         { word: "Chicken", sentence: "Chicken lives in a farm.", translation: "Tavuk çiftlikte yaşar.", color: "lightyellow" },
         { word: "Cow", sentence: "The cow gives milk.", translation: "İnek süt verir.", color: "white" },
         { word: "Pig", sentence: "Pigs like mud.", translation: "Domuzlar çamuru sever.", color: "pink" }
@@ -34,7 +34,7 @@ const themes = {
         { word: "Honey", sentence: "I like honey.", translation: "Balı severim.", color: "gold" },
         { word: "Water", sentence: "I'm thirsty. I want some water.", translation: "Susadım. Biraz su istiyorum.", color: "lightblue" },
         { word: "Apple", sentence: "I want an apple.", translation: "Bir elma istiyorum.", color: "lightcoral" },
-        { word: "Banana", sentence: "I don’t like bananas.", translation: "Muz sevmiyorum.", color: "lightyellow" },
+        { word: "Banana", sentence: "I very like banana.", translation: "Muzu çok severim.", color: "lightyellow" },
         { word: "Sandwich", sentence: "What do you want in your sandwich?", translation: "Sandviçine ne koymak istersin?", color: "wheat" },
         { word: "Soup", sentence: "Soup is boiling.", translation: "Çorba kaynıyor.", color: "lightsalmon" },
         { word: "Salad", sentence: "Do you like salad?", translation: "Salatayı sever misin?", color: "lightgreen" },
@@ -85,24 +85,23 @@ const themes = {
     ],
     "Clothes": [
         { word: "T-shirt", sentence: "This is a blue T-shirt.", translation: "Bu mavi bir tişört.", color: "lightblue" },
-        { word: "Shorts", sentence: "These are blue shorts.", translation: "Bunlar mavi şort.", color: "lightcyan" },
+        { word: "Shorts", sentence: "This is yellow short.", translation: "Bu sarı bir şort.", color: "lightcyan" },
         { word: "Coat", sentence: "I wear a coat in winter.", translation: "Kışın palto giyerim.", color: "lightgray" },
         { word: "Boots", sentence: "In winter, we wear boots.", translation: "Kışın bot giyeriz.", color: "tan" },
         { word: "Hat", sentence: "Put on the hat!", translation: "Şapkayı giy!", color: "lightyellow" },
-        { word: "Shoes", sentence: "My shoes are black.", translation: "Ayakkabılarım siyah.", color: "lightcoral" },
-        { word: "Dress", sentence: "This is a pink dress.", translation: "Bu pembe bir elbise.", color: "lightpink" },
-        { word: "Skirt", sentence: "This is a purple skirt.", translation: "Bu mor bir etek.", color: "plum" },
-        { word: "Pants", sentence: "These are black pants.", translation: "Bunlar siyah pantolon.", color: "lightgreen" },
-        { word: "Socks", sentence: "I'm wearing red socks.", translation: "Kırmızı çoraplar giyiyorum.", color: "lightcoral" },
+        { word: "Shoes", sentence: "My shoes are brown.", translation: "Ayakkabılarım kahverengi.", color: "lightcoral" },
+        { word: "Dress", sentence: "This is a green dress.", translation: "Bu yeşil bir elbise.", color: "lightpink" },
+        { word: "Skirt", sentence: "This is a green skirt.", translation: "Bu yeşil bir etek.", color: "plum" },
+        { word: "Pants", sentence: "This is a blue pants.", translation: "Bu mavi bir pantolon.", color: "lightgreen" },
+        { word: "Socks", sentence: "I'm wearing brown socks.", translation: "Kahverengi çoraplar giyiyorum.", color: "lightcoral" },
         { word: "Scarf", sentence: "In winter, we wear scarves.", translation: "Kışın atkı giyeriz.", color: "plum" },
         { word: "Gloves", sentence: "Put on your gloves!", translation: "Eldivenlerini giy!", color: "lightblue" },
         { word: "Sweater", sentence: "I'm wearing a sweater.", translation: "Kazak giyiyorum.", color: "lightcoral" },
         { word: "Umbrella", sentence: "Take your umbrella.", translation: "Şemsiyeni al.", color: "lightsteelblue" },
         { word: "Raincoat", sentence: "Wear your raincoat.", translation: "Yağmurluğunu giy.", color: "lightyellow" },
         { word: "Rainboots", sentence: "These are rainboots.", translation: "Bunlar yağmur çizmeleri.", color: "lightgreen" },
-        { word: "Cap", sentence: "I wear a cap in summer.", translation: "Yazın şapka giyerim.", color: "lightcyan" },
         { word: "Sunglasses", sentence: "Put on your sunglasses.", translation: "Güneş gözlüklerini tak.", color: "lavender" },
-        { word: "Slippers", sentence: "These are slippers.", translation: "Bunlar terlik.", color: "peachpuff" }
+        { word: "Slippers", sentence: "This is a slippers.", translation: "Bu terlik.", color: "peachpuff" }
     ],
     "Body Parts": [
         { word: "Head", sentence: "Touch your head.", translation: "Başına dokun.", color: "peachpuff" },
@@ -199,7 +198,7 @@ const themes = {
         { word: "Look at", sentence: "Look at the smartboard.", translation: "Akıllı tahtaya bak.", color: "lavender" }
     ],
     "Greetings & Basics": [
-        { word: "What's your name?", sentence: "What's your name? I'm Tom.", translation: "Adın ne? Ben Tom.", color: "lightblue" },
+        { word: "What's your name?", sentence: "What's your name? I'm Evren.", translation: "Adın ne? Ben Evren.", color: "lightblue" },
         { word: "I'm (name)", sentence: "I'm Nehir. Nice to meet you.", translation: "Ben Nehir. Tanıştığıma memnun oldum.", color: "lightpink" },
         { word: "My school", sentence: "This is my school.", translation: "Bu benim okulum.", color: "lightyellow" },
         { word: "My friends", sentence: "These are my friends.", translation: "Bunlar benim arkadaşlarım.", color: "lightgreen" },

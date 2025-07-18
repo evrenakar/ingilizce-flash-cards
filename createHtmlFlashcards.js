@@ -118,7 +118,7 @@ function createHtmlFlashcards() {
                 }
                 
                 .card-emoji {
-                    font-size: 70px;
+                    font-size: 120px;
                     text-align: center;
                     margin: 6px 0;
                     line-height: 1.1;
